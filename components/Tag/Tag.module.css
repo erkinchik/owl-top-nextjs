@@ -28,7 +28,7 @@
   font-weight: bold;
 }
 .green {
-  color: var(--white);
+  color: var(--green);
   background-color: var(--green-light);
   font-weight: bold;
 }

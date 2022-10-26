@@ -5,5 +5,5 @@ export interface TagProps
   children: ReactNode;
   size: "s" | "l";
   color: "ghost" | "red" | "grey" | "green" | "primary";
-  href: string;
+  href?: string;
 }
