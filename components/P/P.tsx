@@ -3,7 +3,7 @@ import styles from "./P.module.css";
 import { PProps } from "./P.props";
 import cn from "classnames";
 
-export const P = ({ children, size }: PProps): JSX.Element => {
+export const P = ({ children, size = "s" }: PProps): JSX.Element => {
   return (
     <p
       className={cn(styles.paragraph, {
