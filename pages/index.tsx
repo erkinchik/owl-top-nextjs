@@ -2,11 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import { Htag, Button, P, Tag, Rating } from "../components";
 import { useState } from "react";
+import { Layout, withLayout } from "../layout/Layout";
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   const [rating, setRating] = useState<number>(3);
   return (
-    <div>
+    <>
       <Htag tag="h1">Текст</Htag>
       <Button appearance={"primary"} arrow={"down"}>
         click
@@ -31,6 +32,8 @@ export default function Home(): JSX.Element {
         10
       </Tag>
       <Rating rating={rating} setRating={setRating} isEditable={true} />
-    </div>
+    </>
   );
 }
+
+export default withLayout(Home);
