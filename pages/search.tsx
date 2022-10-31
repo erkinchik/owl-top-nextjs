@@ -7,39 +7,12 @@ import { GetStaticProps } from "next";
 import axios from "axios";
 import { MenuItem } from "../interfaces/menu.interface";
 
-function Home({ menu, firstCategory }: HomeProps): JSX.Element {
+function Search(): JSX.Element {
   const [rating, setRating] = useState<number>(3);
-  return (
-    <>
-      <Htag tag="h1">Текст</Htag>
-      <Button appearance={"primary"} arrow={"down"}>
-        click
-      </Button>
-      <Button appearance={"ghost"} arrow={"right"}>
-        click
-      </Button>
-      <P size="m">GO back</P>
-      <Tag size="l" color={"red"}>
-        Hello
-      </Tag>
-      <Tag size="s" color={"ghost"}>
-        Hello
-      </Tag>
-      <Tag size="l" color={"primary"}>
-        Hello
-      </Tag>
-      <Tag size="l" color={"green"}>
-        Hello
-      </Tag>
-      <Tag size="l" color={"grey"}>
-        10
-      </Tag>
-      <Rating rating={rating} setRating={setRating} isEditable={true} />
-    </>
-  );
+  return <>search</>;
 }
 
-export default withLayout(Home);
+export default withLayout(Search);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const firstCategory = 0;
