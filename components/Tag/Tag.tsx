@@ -5,7 +5,7 @@ import cn from "classnames";
 
 export const Tag = ({
   children,
-  size = "l",
+  size = "m",
   color = "ghost",
   href,
   ...props
@@ -14,7 +14,7 @@ export const Tag = ({
     <div
       className={cn(styles.tag, {
         [styles.s]: size == "s",
-        [styles.l]: size == "l",
+        [styles.m]: size == "m",
         [styles.ghost]: color == "ghost",
         [styles.red]: color == "red",
         [styles.grey]: color == "grey",

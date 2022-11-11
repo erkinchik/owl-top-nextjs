@@ -1,3 +1,4 @@
+import React from "react";
 import { withLayout } from "../../layout/Layout";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import axios from "axios";
@@ -9,12 +10,24 @@ import {
 import { ParsedUrlQuery } from "querystring";
 import { ProductModel } from "../../interfaces/product.interface";
 import { firstLevelMenu } from "../../helpers/helpers";
+import { TopPageComponent } from "../../page-components";
 
-function Course({ menu, page, products }: CourseProps): JSX.Element {
-  return <>{products && products.length}</>;
+function TopPage({
+  menu,
+  page,
+  products,
+  firstCategory,
+}: CourseProps): JSX.Element {
+  return (
+    <TopPageComponent
+      firstCategory={firstCategory}
+      page={page}
+      products={products}
+    />
+  );
 }
 
-export default withLayout(Course);
+export default withLayout(TopPage);
 
 export const getStaticPaths: GetStaticPaths = async () => {
   let paths: string[] = [];
@@ -27,7 +40,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
       menu.flatMap((mItem) => mItem.pages.map((p) => `/${m.route}/${p.alias}`))
     );
   }
-  console.log(paths);
   return {
     paths,
     fallback: true,
