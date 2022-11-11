@@ -22,7 +22,6 @@
 }
 .footer {
   grid-area: footer;
-
 }
 @media (max-width: 765px) {
   .wrapper {
@@ -34,7 +33,7 @@
       "footer";
   }
   .sidebar {
-    display: none;
+    display: none !important;
   }
   .header {
     display: block;
