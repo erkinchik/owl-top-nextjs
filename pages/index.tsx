@@ -19,19 +19,19 @@ function Home({ menu, firstCategory }: HomeProps): JSX.Element {
         click
       </Button>
       <P size="m">GO back</P>
-      <Tag size="l" color={"red"}>
+      <Tag size="m" color={"red"}>
         Hello
       </Tag>
       <Tag size="s" color={"ghost"}>
         Hello
       </Tag>
-      <Tag size="l" color={"primary"}>
+      <Tag size="m" color={"primary"}>
         Hello
       </Tag>
-      <Tag size="l" color={"green"}>
+      <Tag size="m" color={"green"}>
         Hello
       </Tag>
-      <Tag size="l" color={"grey"}>
+      <Tag size="m" color={"grey"}>
         10
       </Tag>
       <Rating rating={rating} setRating={setRating} isEditable={true} />
