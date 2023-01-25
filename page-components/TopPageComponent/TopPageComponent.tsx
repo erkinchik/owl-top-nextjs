@@ -1,15 +1,18 @@
 import React from "react";
 import { TopPageComponentProps } from "./TopPageComponent.props";
-import { Card, HhData, Htag, Tag } from "../../components";
+import { HhData, Htag, Tag } from "../../components";
 import styles from "./TopPageComponent.module.css";
 import { TopLevelCategory } from "../../interfaces/page.interface";
 import Advantages from "../../components/Advantages/Advantages";
+import Sort from "../../components/Sort/Sort";
+import { SortEnum } from "../../components/Sort/Sort.props";
 
 export const TopPageComponent = ({
   page,
   products,
   firstCategory,
 }: TopPageComponentProps): JSX.Element => {
+  console.log(products);
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
@@ -19,7 +22,7 @@ export const TopPageComponent = ({
             {products.length}
           </Tag>
         )}
-        <span>Сортировка</span>
+        <Sort sort={SortEnum.Price} setSort={() => {}} />
       </div>
 
       <div>
