@@ -38,7 +38,7 @@ export const HhData = ({
           </div>
         </div>
         <div>
-          <div className={styles.title}>Проффесианал</div>
+          <div className={styles.title}>Профессионал</div>
           <div className={styles.salaryValue}>{priceRu(seniorSalary)}</div>
           <div className={styles.rate}>
             <RateIcon className={styles.filled} />
