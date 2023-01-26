@@ -1,0 +1,16 @@
+.textarea {
+  padding: 7px 15px;
+  font-family: var(--font-family);
+  color: var(--black);
+  resize: none;
+  border: none;
+  outline-color: var(--primary);
+  background: var(--white);
+  font-size: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.textarea::placeholder{
+  color: var(--grey);
+}
