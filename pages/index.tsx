@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Htag, Button, P, Tag, Rating } from "../components";
+import { Htag, Button, P, Tag, Rating, Input, TextArea } from "../components";
 import { useState } from "react";
 import { withLayout } from "../layout/Layout";
 import { GetStaticProps } from "next";
@@ -36,6 +36,8 @@ function Home({ menu, firstCategory }: HomeProps): JSX.Element {
         10
       </Tag>
       <Rating rating={rating} setRating={setRating} isEditable={true} />
+      <Input placeholder="text" />
+      <TextArea placeholder="text" />
     </>
   );
 }
