@@ -1,5 +1,6 @@
 .textarea {
   padding: 7px 15px;
+  width: 100%;
   font-family: var(--font-family);
   color: var(--black);
   resize: none;
@@ -11,6 +12,19 @@
   border-radius: 5px;
 }
 
-.textarea::placeholder{
+.textarea::placeholder {
   color: var(--grey);
+}
+.error {
+  border: 1px solid var(--red);
+  outline-color: var(--red);
+}
+.textareaWrapper {
+  position: relative;
+}
+.errorMessage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  color: var(--red);
 }
