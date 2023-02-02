@@ -3,6 +3,7 @@ import styles from "./Card.module.css";
 import { CardProps } from "./Card.props";
 import cn from "classnames";
 import ArrowIcon from "../../assets/icons/arrowIcon.svg";
+import { motion } from "framer-motion";
 
 export const Card = forwardRef(
   (

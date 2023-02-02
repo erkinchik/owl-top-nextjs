@@ -7,6 +7,7 @@ import Advantages from "../../components/Advantages/Advantages";
 import Sort from "../../components/Sort/Sort";
 import { SortEnum } from "../../components/Sort/Sort.props";
 import { sortReducer } from "./sort.reducer";
+import { useScrollY } from "../../hooks/useScrollY";
 
 export const TopPageComponent = ({
   page,
@@ -20,9 +21,11 @@ export const TopPageComponent = ({
       sort: SortEnum.Rating,
     }
   );
+
   useEffect(() => {
     dispatchSort({ type: "reset", initialState: products });
   }, [products]);
+
   const setSort = (sort: SortEnum) => {
     dispatchSort({ type: sort });
   };
